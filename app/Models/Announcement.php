@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Announcement extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+
+    protected $guarded = [
+        'id',
+    ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

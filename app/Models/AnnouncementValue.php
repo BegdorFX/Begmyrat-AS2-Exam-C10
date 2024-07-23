@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class AnnouncementValue extends Model
 {
-    use HasFactory;
+    protected $guarded = [
+        'id',
+    ];
+
+    public $timestamps = false;
+
+
+    public function announcement()
+    {
+        return $this->belongsTo(Announcement::class);
+    }
 }

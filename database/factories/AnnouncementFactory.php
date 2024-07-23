@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
+use App\Models\Serie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +18,13 @@ class AnnouncementFactory extends Factory
      */
     public function definition(): array
     {
+        $category = Category::inRandomOrder()->first();
         return [
-            //
+            'category_id' => $category->id,
+            'name' =>fake()->streetName(),
+            'description' => fake()->paragraph(rand(3, 5)),
+            'stock' => fake()->randomNumber(2),
+            'viewed' => fake()->randomNumber(2),
         ];
     }
 }

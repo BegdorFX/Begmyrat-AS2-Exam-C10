@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('announcements', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->string('image')->nullable();
+            $table->unsignedInteger('stock')->default(0);
+            $table->unsignedInteger('viewed')->default(0);
         });
     }
 
