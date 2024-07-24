@@ -8,6 +8,9 @@
             <div class="row">
                 <div class="col-6">
                     <div class="alert alert-danger text-dark">
+                        <div>
+                            <img src="img/product.jpg" alt="news picture" class="img-fluid">
+                        </div>  
                         <h4>{{ $el->category->name }}</h4>
                         <h4>{{ $el->name }}</h4>
                         <p>{{ $el->description }}</p>

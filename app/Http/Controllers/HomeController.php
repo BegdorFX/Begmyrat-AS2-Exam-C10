@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
-use App\Models\Brand;
-use App\Models\Product;
+
 
 class HomeController extends Controller
 {
     public function index()
     {
         return view('index', ['data' => Announcement::all()]);
+
+        $popular = Announcement::where('stock', '>', 0)
+            ->orderBy('viewed', 'desc')
+            ->take(6)
+            ->get();
     }
 }

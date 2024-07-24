@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Announcement::factory()
-            ->count(100)
+            ->count(30)
             ->create();
     }
 }
