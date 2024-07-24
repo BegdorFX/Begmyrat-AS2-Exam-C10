@@ -21,7 +21,7 @@ class AnnouncementFactory extends Factory
         return [
             'category_id' => $category->id,
             'name' =>fake()->streetName(),
-            'description' => fake()->paragraph(rand(3, 5)),
+            'description' => fake()->paragraph(rand(10, 15)),
             'stock' => fake()->randomNumber(2),
             'viewed' => fake()->randomNumber(2),
         ];
