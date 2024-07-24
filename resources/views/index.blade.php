@@ -1,6 +1,6 @@
 @extends('main.layout')
 
-@section('title') Turkmenportal @endsection
+@section('title') Mainpage @endsection
 
 @section('main_content')
     <div class="container-xl">
