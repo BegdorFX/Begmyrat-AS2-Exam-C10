@@ -28,3 +28,9 @@ Route::controller(CreateAnnouncementController::class)
     ->group(function () {
         Route::get('/create', 'create')->name('create');
     });
+
+Route::controller(CreateAnnouncementController::class)
+    ->group(function () {
+        Route::post('/create/check', 'create_check')->name('create_check');
+    });
+
