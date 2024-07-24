@@ -5,9 +5,8 @@
 
     <ul class="nav nav-pills">
         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Домашная страница</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Популярные</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">О нас</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Добавить новости</a></li>
     </ul>
 </header>
