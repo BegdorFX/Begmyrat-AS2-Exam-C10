@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Announcement;
 use App\Models\Brand;
 use App\Models\Product;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
