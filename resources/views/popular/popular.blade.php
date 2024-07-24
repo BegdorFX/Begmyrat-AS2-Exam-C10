@@ -1,13 +1,19 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
- <div>Popular tovars</div>
-</body>
-</html>
+@extends('main.layout')
+
+@section('title') Popular @endsection
+
+@section('main_content')
+    <div class="border-top py-4">
+        <div class="h3 mb-3">Popular</div>
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-2 g-sm-3">
+            @foreach($popular as $announcement)
+                <div class="col">
+                    @include('app.announcement')
+                </div>
+            @endforeach
+        </div>
+    </div>
+@endsection
+
+
+
