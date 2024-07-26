@@ -5,7 +5,7 @@ use App\Http\Controllers\PopularController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CreateAnnouncementController;
-
+use App\Http\Controllers\OneMessageController;
 
 Route::controller(HomeController::class)
     ->group(function () {
@@ -34,3 +34,8 @@ Route::controller(CreateAnnouncementController::class)
         Route::post('/create/check', 'create_check')->name('create_check');
     });
 
+
+Route::controller(OneMessageController::class)
+    ->group(function () {
+        Route::get('/OneMessage/{id}', 'OneMessage')->name('OneMessage');
+    });
